@@ -3,11 +3,3 @@ rompiendo
 puerta abierta
 a
 b
-nuevo
-
-ad
-kk
-
-j
-ahora.
-
