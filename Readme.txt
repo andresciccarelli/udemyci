@@ -4,4 +4,3 @@ puerta abierta
 a
 b
 nuevo
-2
