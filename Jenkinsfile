@@ -9,17 +9,15 @@ pipeline {
             steps{
                 bat "set"                                                     
             }
-        }/*
+        }
         stage('Starting') {
             steps {
                 echo '========================================================================================================================================================\n========================================================================================================================================================'
                 echo 'Starting DeployMarketUI'
                 echo 'Sending Message to Slack'
-                //wrap([$class: 'BuildUser']) {
-                slackSend color: "good", message: "Build Market UI starting...\n Branch/Tag:${sha1}\n Repository: Market \nTriggered by: " 
-               // }
+                slackSend color: "good", message: "Build Market UI starting...\n Source Branch:${ghprbSourceBranch}\n Target Branch:${ghprbTargetBranch}\n Repository: ${ghprbGhRepository} \nPull Author Login: ${ghprbPullAuthorLogin}" 
             }
-        }*/
+        }
        /* stage ('Checkout-Repository') {
             steps {
                 echo '========================================================================================================================================================\n========================================================================================================================================================'
