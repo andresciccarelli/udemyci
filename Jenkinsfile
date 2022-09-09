@@ -12,7 +12,7 @@ pipeline {
                 echo 'Starting DeployMarketUI'
                 echo 'Sending Message to Slack'
                 //wrap([$class: 'BuildUser']) {
-                slackSend color: "good", message: "Build Market UI starting...\n Branch/Tag:${ghprbActualCommit}\n Repository: Market \nTriggered by: " 
+                slackSend color: "good", message: "Build Market UI starting...\n Branch/Tag:${sha1}\n Repository: Market \nTriggered by: " 
                // }
             }
         }
