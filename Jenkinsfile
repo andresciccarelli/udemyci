@@ -4,6 +4,14 @@ pipeline {
     environment {
         def DATETIME = sh(script: "echo `date '+%Y%m%d-%H%M%S'`", returnStdout: true).trim()
     }
+        stages{
+        stage("Env Variables"){
+            steps{
+                bat "set"                                                     
+            }
+        }
+    }
+    /*
 
     stages {
         stage('Starting') {
@@ -15,7 +23,7 @@ pipeline {
                 slackSend color: "good", message: "Build Market UI starting...\n Branch/Tag:${sha1}\n Repository: Market \nTriggered by: " 
                // }
             }
-        }
+        }*/
        /* stage ('Checkout-Repository') {
             steps {
                 echo '========================================================================================================================================================\n========================================================================================================================================================'
