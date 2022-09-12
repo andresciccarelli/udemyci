@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage("Env Variables"){
             steps{
-                bat "set"                                                     
+                bat4 "set"                                                     
             }
         }
 	/*
